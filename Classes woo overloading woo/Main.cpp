@@ -26,13 +26,28 @@ int main() {
 	cout << "bValue 4 should be 0000000011111111: " << bValue4.get() << endl;
 
 	//test .set() 
-	bValue3.set(65535); // 1111111111111111
+	bValue1.set(65535); // 1111111111111111
 	cout << "bValue 3 should be 1111111111111111: " << bValue3.get() << endl;
 
 	//test .resize()
 	bValue1.resize(16);
 	cout << "bValue 2 should be 0000000000000000: " << bValue1.get() << endl;
 
+	//test isEqual();
+	cout << "bValue1 == bValue4: ";
+	if (isEqual(bValue1, bValue4)) {
+		cout << "True" << endl;
+	}
+	else {
+		cout << "False" << endl;
+	}
+	cout << "bValue3 == bValue4: ";
+	if (isEqual(bValue3, bValue4)) {
+		cout << "True" << endl;
+	}
+	else {
+		cout << "False" << endl;
+	}
 
 	return 0;
 }
